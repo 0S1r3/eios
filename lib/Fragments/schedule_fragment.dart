@@ -248,6 +248,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     List<Widget> scheduleWidgets = [];
 
     for (var studentTT in _studentTimeTable) {
+
       // Заголовок факультета
       scheduleWidgets.add(
         Card(
