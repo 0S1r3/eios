@@ -198,7 +198,7 @@ class _GameScreenState extends State<GameScreen> with SingleTickerProviderStateM
         showDialog(
           context: context,
           barrierDismissible: false,
-          builder: (_) => AlertDialog(
+          builder: (BuildContext dialogContext) => AlertDialog(
             title: const Text("В память"),
             content: Column(
               mainAxisSize: MainAxisSize.min,
@@ -211,7 +211,7 @@ class _GameScreenState extends State<GameScreen> with SingleTickerProviderStateM
             actions: [
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Navigator.of(dialogContext).pop();
                   _startGame();
                 },
                 child: const Text("Начать играть"),
